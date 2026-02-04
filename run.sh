@@ -36,10 +36,10 @@ done
 
 echo "Running the main script"
 # Use python3, the standard on Linux/macOS
-python3 python_scripts/main.py "$n" "$w"
+python3 main.py "$n" "$w"
 
 echo "Creating the report and adding it to the Backup directory"
-python3 python_scripts/backup_script.py
+python3 backup_script.py
 
 echo "Opening the latest report"
 # Choose the appropriate command to open the file based on the system
