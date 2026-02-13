@@ -20,7 +20,6 @@ class PriorityQueue(object):
 
     def dequeue(self):
         if self.__length == 0:
-            print("Pusto")
             return None
         elif self.__length == 1:
             element = self.__elements.pop(1)
@@ -69,8 +68,8 @@ class Node:
 def countInversions(table):
         counter = 0
         for k in range(15):
+            t1 = table[k] 
             for i in range(k+1, 16):
-                t1 = table[k] 
                 t2 = table[i]
                 if t1 > t2 and t2 != 0 and t1 != 0:
                     counter += 1
