@@ -4,7 +4,7 @@ from datetime import datetime
 timeNow = datetime.now()
 timeStamp = timeNow.strftime("%Y%m%d_%H%M")
 projektDir = os.path.dirname(os.path.abspath(__file__))
-fileName = f"raport_{timeStamp}.html"
+fileName = f"report_{timeStamp}.html"
 fullPath = os.path.join(projektDir, f"Backup/{fileName}")
 
 folderIn = os.path.join(projektDir, "In")
@@ -77,5 +77,5 @@ html += "</table>"
 if not os.path.exists(fullPath):
     with open(fullPath, "w", encoding="utf-8") as f:
         f.write(html)
-with open(projektDir + "/LastRaport.html", 'w', encoding="utf-8") as fw:
+with open(projektDir + "/LastReport.html", 'w', encoding="utf-8") as fw:
     fw.write(html)
